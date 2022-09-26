@@ -1,11 +1,11 @@
 {
   "dependencies": {
+    "@types/node": "^18.7.23",
     "readline-sync": "^1.4.10"
   },
   "name": "cfs2022ii",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

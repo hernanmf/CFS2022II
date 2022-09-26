@@ -65,4 +65,5 @@ let miAutito: Auto = new Auto(
   `Delantera`,
   160
 );
+
 miAutito.getAuto();
