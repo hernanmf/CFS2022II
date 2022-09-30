@@ -44,6 +44,10 @@ class Profesor {
   public mostrarAlumnos() {
     console.log(this.listaAlumnos);
   }
+
+  public setListaAlumnos(arreglo: Alumno[]) {
+    this.listaAlumnos = arreglo;
+  }
 }
 
 class Escuela {
@@ -68,9 +72,9 @@ class Escuela {
     return this.listaAlumnos;
   }
 
-  public getListaProfes() {
+  /* public getListaProfes() {
     return this.listaProfes;
-  }
+  } */
 }
 
 //instalar npm install @types/node
@@ -83,7 +87,7 @@ class GestorDeArchivos {
   constructor(txtFileLocation: string) {
     let archivoTxt: string = fs.readFileSync(txtFileLocation, "utf-8");
     this.arregloString = archivoTxt.split(";"); //vamos a tener nuestro "objetos" separados por ;
-    //[Juan Perez,333333333,Karen Simari,22222222]
+    //[Juan Perez,333333333;Karen Simari,22222222]
   }
 
   public mostrarArreglo(): void {
@@ -102,10 +106,11 @@ function crearProfesor(
   arrayAlumnos: Array<Alumno>
 ): void {
   //transformo el elemento de tipo string en un objeto de tipo Profesor
-  let propiedadProfe = profesor.split(","); //[Juan Perez, 333333333, Karen Simari, 22222222]
-  let nombre: string = propiedadProfe[0];
-  let DNI: number = Number(propiedadProfe[1]);
-  let listaAlumnos: Array<Alumno> = arrayAlumnos;
+  let propiedadProfe: string[] = profesor.split(","); //[Juan Perez, 333333333]
+  let nombre: string = propiedadProfe[0]; //[Juan Perez]
+  let DNI: number = Number(propiedadProfe[1]); //[333333333]
+  /* let listaAlumnos: Array<Alumno> = arrayAlumnos; esta alternativa o la de abajo*/
+  let listaAlumnos: Alumno[] = arrayAlumnos;
   let nuevoProfe: Profesor = new Profesor(nombre, DNI, listaAlumnos);
   //inserto el elemento de tipo Profesor en el arreglo recibido
   arrayProfesor.push(nuevoProfe);
@@ -113,7 +118,7 @@ function crearProfesor(
 
 //Eliminar profesor en una posicion y agregar uno nuevo
 //instalamos readline-sync -- npm install readline-sync
-function borrarrProfe(
+function borrarProfe(
   arregloProfe: Array<Profesor>,
   position: number,
   arregloAlumnos?: Array<Alumno>
@@ -128,7 +133,7 @@ function borrarrProfe(
 }
 
 //Inicio programa
-let datos: GestorDeArchivos = new GestorDeArchivos("profes.txt");
+let datos: GestorDeArchivos = new GestorDeArchivos("profes.txt"); //trae los elementos del archivo
 let arrayProfe: Array<Profesor> = [];
 let alumno1: Alumno = new Alumno("Gloria Dominguez", 8, 252546346);
 let alumno2: Alumno = new Alumno("Juan Dominguez", 5, 25254255);
@@ -142,3 +147,6 @@ for (let i: number = 0; i < datos.getArregloString().length; i++) {
 }
 
 console.log(arrayProfe);
+
+/* arrayProfe[1].setListaAlumnos(arrayAlumnos); */
+arrayProfe[1].mostrarAlumnos();
