@@ -1,7 +1,7 @@
-Fiat,Punto,hatchback,99;
-Volkswagen,Gol,hatchback,87;
-Peugeot,208,hatchback,115;
-Peugeot,208(2020),hatchback,115;
-Peugeot,2008,suv,109;
-Renault,Clio LE,hatchback,108;
-Volkswagen,Amarok base,pick up,165;
+ASA123,Fiat,Punto,hatchback,sj38n5if,49494krm,Jose Perez,29924940;
+MAM221,Volkswagen,Gol,hatchback,se84m4f9,47474aaa,Lionel Messi,21111111;
+AF102WA,Peugeot,208,hatchback,s8em3jr4,29923ddd,Carlos Gutierrez,12938924;
+UYT008,Peugeot,208(2020),hatchback,sh9rd9ew,33332dfr,Luis Suarez,23123223;
+AA100BA,Peugeot,2008,suv,sje8sf80,58649sas,Daniel Martinez,23123322;
+AR767BA,Renault,Clio LE,hatchback,fjrj334k,12835tyt,Marcelo Lopez,11172368;
+AD225AA,Volkswagen,Amarok base,pick up,dje8k449,38904fgf,Mike Tyson,29403638;
