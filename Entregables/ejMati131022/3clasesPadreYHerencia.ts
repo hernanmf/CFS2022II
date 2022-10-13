@@ -186,4 +186,64 @@ class Smartphone extends Electrodomestico {
 }
 
 /*3er clase*/
-class Comercio {}
+class Profesional {
+  private DNI: number;
+  private nombreYApellido: string;
+  private fechaNacimiento: Date;
+  private idContrato: number;
+
+  constructor(
+    DNI: number,
+    nombreYApellido: string,
+    fechaNacimiento: Date,
+    idContrato: number
+  ) {
+    this.DNI = DNI;
+    this.nombreYApellido = nombreYApellido;
+    this.fechaNacimiento = fechaNacimiento;
+    this.idContrato = idContrato;
+  }
+  private Concentrarse(): void {}
+
+  private Viajar(): void {}
+}
+
+class Futbolista extends Profesional {
+  private nroCarnetAFA: number;
+  private posiciones: string[];
+
+  constructor(
+    DNI: number,
+    nombreYApellido: string,
+    fechaNacimiento: Date,
+    idContrato: number,
+    nroCarnetAFA: number,
+    posiciones: string[]
+  ) {
+    super(DNI, nombreYApellido, fechaNacimiento, idContrato);
+    this.nroCarnetAFA = nroCarnetAFA;
+    this.posiciones = posiciones;
+  }
+
+  jugarPartido(): void {}
+
+  entrenar(): void {}
+}
+class DT extends Profesional {
+  private nroLicenciaAFA: number;
+
+  constructor(
+    DNI: number,
+    nombreYApellido: string,
+    fechaNacimiento: Date,
+    idContrato: number,
+    nroLicenciaAFA: number
+  ) {
+    super(DNI, nombreYApellido, fechaNacimiento, idContrato);
+    this.nroLicenciaAFA = nroLicenciaAFA;
+  }
+
+  dirigirPartido(): void {}
+
+  dirigirEntrenamiento(): void {}
+}
