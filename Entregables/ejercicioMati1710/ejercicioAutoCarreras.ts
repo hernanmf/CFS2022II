@@ -42,24 +42,7 @@ class Auto {
     }
   }
 
-  public acelerar(): void {
-    if (this.Combustible > 1) {
-      this.Velocidad += 10;
-      this.Combustible -= 1;
-      console.log(
-        "Velocidad actual: ",
-        this.Velocidad,
-        ", combustible restante: ",
-        this.Combustible
-      );
-    } else {
-      this.Velocidad = 0;
-      this.Encendido = false;
-      console.log(
-        " El auto se quedo sin combustible, se apago y freno por completo, repostar por favor"
-      );
-    }
-  }
+  public acelerar(cuanto: number): void {}
 
   public frenar(): void {
     if (this.Velocidad - 10 <= 0) {
@@ -90,8 +73,21 @@ class AutoCarrerasF1 extends Auto {
     this.Equipo = Equipo;
     this.DRSActivo = false;
   }
+
   public getEquipo(): string {
     return this.Equipo;
+  }
+
+  public activarDesactivarDRS(): void {
+    if (this.DRSActivo === true) {
+      //esta encendido?
+      this.DRSActivo = false;
+      console.log("DRS desactivado");
+    } else {
+      //tiene combustible?
+      this.DRSActivo = true;
+      console.log("DRS activo");
+    }
   }
 
   public acelerar(cuanto: number): void {
