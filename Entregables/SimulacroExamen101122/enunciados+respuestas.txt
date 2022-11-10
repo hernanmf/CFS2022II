@@ -1,0 +1,46 @@
+1. +¿A que se llama Herencia?
+Herencia es una cualidad de la POO que hace referencia a que un objeto pueda heredar de otro, definiendo asi que tendra las mismas propiedades y comportamientos que su clase padre. Muy util en situaciones que tenemos objetos que comparten caracteristicas, esto permite que generalicemos en una clase padre esas caracteristicas comunes y maximizar la reutilizacion.
+
+2. ¿Qué es una subclase?
+Una subclase es un clase que hereda de otra clase a la que llamamos clase padre.
+
+3. Que es un objeto?
+Un objeto es una entidad que tiene que ver con problematica planteada y de la cual podemos distinguir que tiene ciertas propiedades (atributos) y comportamiento (metodos) y se modela en una clase.
+
+4. ¿Qué significa que un atributo sea protegido?
+Significa que el atributo no puede ser accedido o visualizado de manera directa, igual que un atributo privado(solo podra accederse si se declaran los metodos para poder hacerlo y estos son de publico acceso), pero si se le permite acceso a las subclases.
+
+5. Existe la herencia múltiple en Typescript?
+No existe la herencia multiple en TS y para eso son las interfaces las que pueden ayudarnos en el caso que se necesite hacer algun tipo de herencia multiple.
+
+6. Definir Poliformismo
+El Poliformismo es una de las caracteristicas que otorgan la POO y se refiere a la posibilidad de que un objeto pueda tomar multiples formas y de esta manera un objeto o metodo puedan responder a una misma invocacion funcionando de una manera diferente en su interior.
+
+7. ¿Qué es un constructor? Para qué sirve?
+El metodo constructor es el metodo mediante el cual se crearan las instancias de una clase.
+
+8. ¿Cómo se crea una clase abstracta?
+La clase abstracta se crea de la misma manera que una clase comun y corriente pero anteponiendo a la definicion de la clase, la clausula "abstract"
+abstract class ClaseAbstracta{
+  .
+  .
+}
+
+9. ¿Para que se usa el super?
+El super se utiliza en el constructor de las clases que heredan para poder reutilizar el constructor de la clase padre y partiendo de ahi completar el constructor de la clase hija con los atributos que hagan falta para su instancia.
+
+10. ¿Qué son las interfaces?
+Las interfaces son un mecanismo de la POO que nos sirve para declarar/identificar los metodos y atributos que debe implementar una clase que usa esa interfaz y por eso es que se dice que es como un contrato, porque la clase q la utiliza tiene que hacer uso e implementar lo dicho en la interfaz.
+
+
+Ejercicios de codeo:
+Crear una clase -con al menos 2 métodos y 2 atributos-
+Crear un objeto
+Crear una interfaz - implementarla en una clase-
+Crear una clase Abstracta
+Crear una relación de herencia
+Crear un ejemplo de composición
+
+Queda a elección de cada uno de los alumnos, si hacer los ejercicios por separado o en caso contrario hacer todo en una misma clase
+Modo de entrega:
+Al igual a lo que venimos trabajando se debera subir el pr correspondiente a git, y mandarselo a su tutor asignado
